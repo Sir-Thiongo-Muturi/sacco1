@@ -1,0 +1,23 @@
+.input {
+    @apply border p-2 mb-2 w-full rounded;
+}
+
+.btn {
+    @apply p-2 rounded text-white;
+}
+
+.btn-primary {
+    @apply bg-blue-500 hover:bg-blue-600;
+}
+
+.btn-secondary {
+    @apply bg-gray-500 hover:bg-gray-600;
+}
+
+.error {
+    @apply text-red-500;
+}
+
+.container {
+    @apply max-w-md mx-auto;
+}
