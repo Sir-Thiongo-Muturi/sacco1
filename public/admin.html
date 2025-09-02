@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="container bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Admin Dashboard</h1>
+        <h2 class="text-xl">Members</h2>
+        <ul id="members"></ul>
+        
+        <h2 class="text-xl mt-4">Pending Registrations</h2>
+        <ul id="pending"></ul>
+        
+        <h2 class="text-xl mt-4">Add Member</h2>
+        <form id="addMemberForm">
+            <input type="text" id="addUsername" placeholder="Username" class="input" required>
+            <input type="password" id="addPassword" placeholder="Password" class="input" required>
+            <input type="text" id="addName" placeholder="Name" class="input" required>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        
+        <h2 class="text-xl mt-4">Add Contribution</h2>
+        <form id="contribForm">
+            <select id="contribMember" class="input"></select>
+            <input type="number" id="contribAmount" placeholder="Amount" class="input" required>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        
+        <h2 class="text-xl mt-4">Issue Loan</h2>
+        <form id="loanForm">
+            <select id="loanMember" class="input"></select>
+            <input type="number" id="loanAmount" placeholder="Amount" class="input" required>
+            <button type="submit" class="btn btn-primary">Issue</button>
+        </form>
+        
+        <h2 class="text-xl mt-4">Record Repayment</h2>
+        <form id="repayForm">
+            <select id="repayMember" class="input"></select>
+            <select id="repayLoan" class="input"></select>
+            <input type="number" id="repayAmount" placeholder="Amount" class="input" required>
+            <button type="submit" class="btn btn-primary">Record</button>
+        </form>
+        
+        <h2 class="text-xl mt-4">Add Fine (e.g., KES100 for missing meeting)</h2>
+        <form id="fineForm">
+            <select id="fineMember" class="input"></select>
+            <input type="number" id="fineAmount" placeholder="Amount" class="input" required value="100">
+            <button type="submit" class="btn btn-primary">Add Fine</button>
+        </form>
+        
+        <h2 class="text-xl mt-4">Post Agenda</h2>
+        <form id="agendaForm">
+            <input type="date" id="agendaDate" class="input" required>
+            <textarea id="agendaText" placeholder="Agenda text" class="input" required></textarea>
+            <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+        
+        <h2 class="text-xl mt-4">Report</h2>
+        <pre id="report"></pre>
+        
+        <button onclick="logout()" class="btn btn-secondary mt-4">Logout</button>
+    </div>
+    <script src="script.js"></script>
+    <script>loadAdminDashboard();</script>
+</body>
+</html>
