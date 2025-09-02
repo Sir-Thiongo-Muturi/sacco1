@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="container bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Member Dashboard</h1>
+        <p>Name: <span id="name"></span></p>
+        <p>Share Capital: KES <span id="share_capital"></span></p>
+        <p>Outstanding Loans (incl. interest): KES <span id="outstanding_loans"></span></p>
+        <p>Borrowable Amount: KES <span id="borrowable_amount"></span></p>
+        <p>Fines Total: KES <span id="fines_total"></span></p>
+        <p>Group Total Capital: KES <span id="total_capital"></span></p>
+        <h2 class="text-xl mt-4">Loans</h2>
+        <ul id="loans"></ul>
+        <h2 class="text-xl mt-4">Agendas</h2>
+        <ul id="agendas"></ul>
+        <h2 class="text-xl mt-4">Documents</h2>
+        <ul id="documents"></ul>
+        <button onclick="logout()" class="btn btn-secondary mt-4">Logout</button>
+    </div>
+    <script src="script.js"></script>
+    <script>loadMemberDashboard();</script>
+</body>
+</html>
