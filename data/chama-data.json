@@ -1,0 +1,14 @@
+{
+  "users": {
+    "admin": { "password": "$2b$10$...hashed...", "role": "admin" },
+    "member1": { "password": "$2b$10$...hashed...", "role": "member", "memberId": 1 },
+    "member2": { "password": "$2b$10$...hashed...", "role": "member", "memberId": 2 }
+  },
+  "members": [
+    { "id": 1, "name": "John Doe", "share_capital": 0, "loans": [], "fines_total": 0 },
+    { "id": 2, "name": "Jane Smith", "share_capital": 0, "loans": [], "fines_total": 0 }
+  ],
+  "pendingRegistrations": [],
+  "agendas": [],
+  "documents": ["constitution.pdf"]
+}
